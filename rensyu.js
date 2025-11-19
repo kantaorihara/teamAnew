@@ -1,4 +1,4 @@
-const paragraphs = document.querySelectorAll('.main-expo, .sansyo1, .sansyo2, .nihon-anime, .japanmap, .sub-title, .sub-menu');
+const paragraphs = document.querySelectorAll('.main-expo, .nihon-anime, .japanmap, .sub-title, .sub-menu');
 
 const options = {
   root: null,
