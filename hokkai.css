@@ -74,9 +74,6 @@ img {
   color: white;
 }
 
-/*
-VARIABLES
-================================================ */
 :root {
     --light-green: #d5edeb;
     --green: #63dbd0;
@@ -88,9 +85,6 @@ VARIABLES
     --oswald-font: 'Oswald', sans-serif;
 }
 
-/*
-COMMON
-================================================ */
 .btn {
     color: var(--white);
     background: var(--sky);
@@ -102,10 +96,10 @@ COMMON
     transition: .4s;
 }
 
-/*
-SLIDE MENU
-================================================ */
+/*スライドメニュー*/
+
 /* 開閉ボタン */
+
 .btn-menu {
     position: fixed;
     right: 1rem;
@@ -163,7 +157,7 @@ SLIDE MENU
     font-size: 1.5rem;
 }
 
-.menu-list a:hover { /*変更部分*/
+.menu-list a:hover { 
     color: #0bd;
 }
 
@@ -468,8 +462,9 @@ article p {
   margin-bottom: 50px;
 }
 
-html { /*変更部分*/
+html { 
   scroll-behavior: smooth;
 }
+
 
 
