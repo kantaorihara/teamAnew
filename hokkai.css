@@ -163,6 +163,10 @@ SLIDE MENU
     font-size: 1.5rem;
 }
 
+.menu-list a:hover { /*変更部分*/
+    color: #0bd;
+}
+
 /*写真部分*/
 
 picture {
@@ -463,3 +467,9 @@ article p {
   justify-content: space-between;
   margin-bottom: 50px;
 }
+
+html { /*変更部分*/
+  scroll-behavior: smooth;
+}
+
+
