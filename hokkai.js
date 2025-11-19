@@ -1,6 +1,26 @@
-/*
-スライドメニュー
-================================================ */
+/*ヘッダ背景*/
+const images = ["ginzan.jpg", "tokei.jpg"];
+let current = 0;
+const bg1 = document.getElementById("header-bg1");
+const bg2 = document.getElementById("header-bg2");
+
+bg1.style.backgroundImage = `url(${images[0]})`;
+
+setInterval(() => {
+  current = (current + 1) % images.length;
+
+  bg2.style.backgroundImage = `url(${images[current]})`;
+
+  bg2.classList.add("show");
+  bg1.classList.remove("show");
+
+  setTimeout(() => {
+    bg1.style.backgroundImage = bg2.style.backgroundImage;
+    bg2.classList.remove("show");
+  }, 2000);
+}, 5000);
+
+/*スライドメニュー*/
 const menuOpen = document.querySelector('#menu-open');
 const menuClose = document.querySelector('#menu-close');
 const menuPanel = document.querySelector('#menu-panel');
@@ -200,3 +220,4 @@ images.forEach(src => {
   img.src = `images/${src}`;
   container.appendChild(img);
 });
+
