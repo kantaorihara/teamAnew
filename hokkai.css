@@ -1,0 +1,465 @@
+body {
+    min-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*Homeボタン*/
+.main-nav {
+  display: flex;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+  list-style: none;
+}
+
+.main-nav li {
+  margin-left: 36px;
+}
+
+.main-nav a {
+  color: #432;
+}
+
+.main-nav a:hover {
+  color: #0bd;
+}
+
+/*背景画像*/
+.bgp {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wrapper {
+  max-width: 1350px;
+  padding: 0 4%;
+}
+
+/*背景写真*/
+#home {
+  background-image: url(C:/Users/ykdng/Desktop/images/tesuto2.jpg);
+  min-height: 100vh;
+}
+
+#home .page-title {
+  text-transform:  none;
+}
+
+.home-content {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.page-title {
+  font-size: 5rem;
+  color: white;
+}
+
+/*
+VARIABLES
+================================================ */
+:root {
+    --light-green: #d5edeb;
+    --green: #63dbd0;
+    --sky: #dbedf0;
+    --sky-rgb: 219, 237, 240;
+    --brown: #403632;
+    --light-grey: #eee;
+    --white: #fff;
+    --oswald-font: 'Oswald', sans-serif;
+}
+
+/*
+COMMON
+================================================ */
+.btn {
+    color: var(--white);
+    background: var(--sky);
+    border: 1px solid var(--sky);
+    text-decoration: none;
+    padding: 1rem;
+    display: inline-block;
+    margin: 2rem 0;
+    transition: .4s;
+}
+
+/*
+SLIDE MENU
+================================================ */
+/* 開閉ボタン */
+.btn-menu {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    z-index: 4;
+    padding: .5rem 1rem;
+    border: 1px solid var(--brown);
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    transition: .4s;
+}
+.btn-menu svg {
+    fill: var(--brown);
+    margin-top: .25rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+/* 閉じるボタン */
+
+#menu-close {
+    border: 1px solid var(--brown);
+}
+#menu-close svg {
+    fill: var(--brown);
+}
+
+/* スライドメニューパネル */
+
+#menu-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    padding: 8rem 2rem 2rem;
+    width: max(32vw, 20rem);
+    height: 100vh;
+    background-color: rgba(var(--sky-rgb), 0.8);
+    box-shadow: 0 0 2rem var(--brown);
+    font-family: var(--oswald-font);
+    translate: 100vw;
+    transition: translate 0.4s ease; /*自然なアニメーションの追加*/
+}
+.menu-list {
+    list-style: none;
+}
+.menu-list li {
+    margin: 1.5rem 0;
+    opacity: 0;
+}
+.menu-list a {
+    color: var(--brown);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/*写真部分*/
+
+picture {
+  width: 50%;
+  background-color: lightgreen;
+  height: 2000px;
+}
+
+picture img {
+  margin: 20px 20px 20px 20px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/*記事部分*/
+article {
+  width: 50%;
+  background-color: lightcoral;
+  height: 2000px
+}
+
+article h1 {
+  margin: 20px 20px 20px 20px;
+}
+
+article p {
+  margin: 20px 20px 20px 25px;
+}
+
+.anime {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.anime.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.anime:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/*cm部分*/
+
+.cmshow {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 400px;
+  height: 225px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  transition: transform 0.6s ease;
+  z-index: 10;
+}
+
+.cmshow.hidden {
+  transform: translateX(-120%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-cm-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.cm {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+  object-fit: cover;
+}
+
+.cm.active {
+  opacity: 1;
+}
+
+.btn-cm-open {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+.btn-cm-open.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*警告（偽）部分*/
+.wrshow1 {
+  position: fixed;
+  bottom: 100px;
+  left: 700px;
+  width: 500px;
+  height: 281px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  z-index: 10;
+}
+
+.wrshow1.hidden {
+  transform: translateX(-300%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-wr-close1 {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: rgba(255, 0, 0, 1);
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.wr1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+  object-fit: cover;
+}
+
+.wr1.active {
+  opacity: 1;
+}
+
+/*警告（偽）部分2*/
+.wrshow2 {
+  position: fixed;
+  bottom: 200px;
+  left: 300px;
+  width: 500px;
+  height: 281px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  z-index: 10;
+}
+
+.wrshow2.hidden {
+  transform: translateX(-300%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-wr-close2 {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: rgba(255, 225, 0, 1);
+  color: #000;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.wr2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  object-fit: cover;
+}
+
+.wr2.active {
+  opacity: 1;
+}
+
+/*警告（偽）部分3*/
+.wrshow3 {
+  position: fixed;
+  bottom: 280px;
+  left: 600px;
+  width: 500px;
+  height: 281px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  z-index: 10;
+}
+
+.wrshow3.hidden {
+  transform: translateX(-300%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-wr-close3 {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: rgba(255, 255, 255, 1);
+  color: #000;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.wr3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  object-fit: cover;
+}
+
+.wr3.active {
+  opacity: 1;
+}
+
+/*スライド警告*/
+.photo-scroll-wrapper {
+  position: fixed;
+  overflow: hidden;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  height: 720px;
+  z-index: 8;
+}
+
+.photo-scroll {
+  display: flex;
+  position: absolute;
+  animation: scrollLoop 10s linear infinite;
+}
+
+.photo-scroll img {
+  display: inline;
+  width: 300px;
+  flex-shrink: 0;
+}
+
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(-1500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.photo-scroll-wrapper.hidden {
+  display: none;
+}
+
+.twoc {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
