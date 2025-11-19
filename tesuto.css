@@ -11,10 +11,47 @@ body {
 header {
     width: 100%;
     background-color: lightcoral;
-    height: 100px;
-    background-image: url(C:/Users/ykdng/Desktop/images/1003.jpg);
+    height: 800px;
+    background-image: url(shikunDJI_0246_TP_V.jpg);
     background-size: 100%;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-content {
+  text-align: center;
+  margin-top: 0%;
+}
+
+.home-content p {
+  font-size: 1.125rem;
+  margin-top: 10px 0 42px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 1.2s;     
+}
+
+.page-title {
+  font-size: 5rem;
+  font-family: 'Philosopher', serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.3s;
 }
 
 footer {
@@ -44,8 +81,12 @@ main {
 
 .main-expo {
     font-size: 1.375rem;
+    padding: 0 100px 50px;
     font-weight: normal;
     border-bottom: 2px #0bd solid;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
 .japanmap {
@@ -53,6 +94,30 @@ main {
     margin: 20px auto;
     max-width: 80%;
     height: auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.japanmap.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nihon-anime {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.nihon-anime.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.main-expo.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .sub-title {
@@ -60,12 +125,28 @@ main {
     padding: 0 100px 50px;
     border-bottom: 2px #0bd solid;
     font-weight: normal;
-    text-align: center;
+    margin-top: 15%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.sub-title.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .sub-menu {
     margin-bottom: 60px;
     list-style: none;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.sub-menu.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .sub-menu li {
@@ -88,3 +169,4 @@ aside {
 aside p {
     padding: 12px 10px;
 }
+
