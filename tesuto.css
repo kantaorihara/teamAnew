@@ -38,6 +38,7 @@ header {
 
 .home-content p {
   font-size: 1.125rem;
+  color: #ffffff;
   margin-top: 10px 0 42px;
   opacity: 0;
   animation: fadeIn 1.5s ease-out forwards;
@@ -49,6 +50,7 @@ header {
   font-family: 'Philosopher', serif;
   text-transform: uppercase;
   font-weight: normal;
+  color: #ffffff;
   opacity: 0;
   animation: fadeIn 1.5s ease-out forwards;
   animation-delay: 0.3s;
@@ -169,4 +171,5 @@ aside {
 aside p {
     padding: 12px 10px;
 }
+
 
