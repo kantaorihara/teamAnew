@@ -183,7 +183,7 @@ img {
 picture {
   width: 50%;
   background-color: lightgreen;
-  height: 200rem;
+  height: 300rem;
 }
 
 picture img {
@@ -197,7 +197,7 @@ picture img {
 article {
   width: 50%;
   background-color: lightcoral;
-  height: 200rem;
+  height: 300rem;
 }
 
 article h1 {
@@ -482,6 +482,7 @@ article p {
 html { 
   scroll-behavior: smooth;
 }
+
 
 
 
