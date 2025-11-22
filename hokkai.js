@@ -1,3 +1,25 @@
+/*ロード画面風*/
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loading-screen");
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 4500);
+});
+
+/*ヘッダ写真*/
+document.addEventListener("DOMContentLoaded", () => {
+  const image = document.querySelectorAll("header .header-img");
+  let index = 0;
+
+  setInterval(() => {
+    image[index].classList.remove("active");
+
+    index = (index + 1) % image.length;
+
+    image[index].classList.add("active");
+  }, 4000);
+});
+
 /*ヘッダ写真*/
 document.addEventListener("DOMContentLoaded", () => {
   const image = document.querySelectorAll("header .header-img");
@@ -108,11 +130,11 @@ document.addEventListener("DOMContentLoaded", function() {
   //初期：表示ボタン隠す
   cmOpen.classList.add('hiddden');
 
-  //1秒後にcm表示
+  //5.5秒後にcm表示
   setTimeout(() => {
     cmPanel.classList.remove('hidden');
     cmOpen.classList.add('hidden');
-  }, 1000);
+  }, 5500);
 
   //画面切り替え
   function showNextImage() {
@@ -146,10 +168,10 @@ document.addEventListener("DOMContentLoaded", function() {
   const wrClose1 = document.getElementById('wr-close1');
   const container = document.querySelector('.photo-scroll-wrapper');
 
-  //2秒後にcm表示
+  //6.5秒後にcm表示
   setTimeout(() => {
     wrPanel1.classList.remove('hidden');
-  }, 2000);
+  }, 6500);
 
   //画面切り替え
   function showNextImage() {
@@ -174,10 +196,10 @@ document.addEventListener("DOMContentLoaded", function() {
   const wrPanel2 = document.getElementById('wr-panel2');
   const wrClose2 = document.getElementById('wr-close2');
 
-  //2.3秒後にcm表示
+  //6.8秒後にcm表示
   setTimeout(() => {
     wrPanel2.classList.remove('hidden');
-  }, 2300);
+  }, 6800);
 
   //閉じるボタン
 　wrClose2.addEventListener('click', () => {
@@ -193,10 +215,10 @@ document.addEventListener("DOMContentLoaded", function() {
   const wrPanel3 = document.getElementById('wr-panel3');
   const wrClose3 = document.getElementById('wr-close3');
 
-  //2.4秒後にcm表示
+  //6.9秒後にcm表示
   setTimeout(() => {
     wrPanel3.classList.remove('hidden');
-  }, 2400);
+  }, 6900);
 
   //閉じるボタン
 　wrClose3.addEventListener('click', () => {
@@ -212,6 +234,7 @@ images.forEach(src => {
   img.src = `images/${src}`;
   container.appendChild(img);
 });
+
 
 
 
