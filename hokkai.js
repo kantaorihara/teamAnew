@@ -20,20 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 4000);
 });
 
-/*ヘッダ写真*/
-document.addEventListener("DOMContentLoaded", () => {
-  const image = document.querySelectorAll("header .header-img");
-  let index = 0;
-
-  setInterval(() => {
-    image[index].classList.remove("active");
-
-    index = (index + 1) % image.length;
-
-    image[index].classList.add("active");
-  }, 4000);
-});
-
 /*スライドメニュー*/
 const menuOpen = document.querySelector('#menu-open');
 const menuClose = document.querySelector('#menu-close');
@@ -234,6 +220,7 @@ images.forEach(src => {
   img.src = `images/${src}`;
   container.appendChild(img);
 });
+
 
 
 
