@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-//警告（偽）部3
+//警告（偽）部分3
 document.addEventListener("DOMContentLoaded", function() {
   const images = document.querySelectorAll('.wr3');
   let current = 0;
@@ -220,6 +220,7 @@ images.forEach(src => {
   img.src = `images/${src}`;
   container.appendChild(img);
 });
+
 
 
 
