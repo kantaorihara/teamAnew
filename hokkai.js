@@ -213,13 +213,14 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const container = document.querySelector('.photo-scroll');
-const images = ['C:/Users/ykdng/Desktop/images/1009.jpg', 'C:/Users/ykdng/Desktop/images/1010.jpg', 'C:/Users/ykdng/Desktop/images/1011.jpg', 'C:/Users/ykdng/Desktop/images/1012.jpg', 'C:/Users/ykdng/Desktop/images/1013.jpg']
+const images = ['1009.jpg', '1010.jpg', '1011.jpg', '1012.jpg', '1013.jpg']
 
 images.forEach(src => {
   const img = document.createElement('img');
   img.src = `images/${src}`;
   container.appendChild(img);
 });
+
 
 
 
