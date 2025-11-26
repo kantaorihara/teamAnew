@@ -285,6 +285,7 @@ article p {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 2s ease-out, transform 2s ease-out;
+  border-bottom: 2px #0bd solid;
 }
 
 .anime.is-visible {
@@ -555,6 +556,7 @@ article p {
 html { 
   scroll-behavior: smooth;
 }
+
 
 
 
