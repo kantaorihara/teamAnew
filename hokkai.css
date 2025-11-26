@@ -255,7 +255,7 @@ img {
 
 picture {
   width: 50%;
-  background-color: #000;
+  background-color: #fff;
   height: 500rem;
 }
 
@@ -269,7 +269,7 @@ picture img {
 /*記事部分*/
 article {
   width: 50%;
-  background-color: lightcoral;
+  background-color: #fff;
   height: 500rem;
 }
 
@@ -555,6 +555,7 @@ article p {
 html { 
   scroll-behavior: smooth;
 }
+
 
 
 
