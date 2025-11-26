@@ -287,7 +287,11 @@ article p {
   transition: opacity 2s ease-out, transform 2s ease-out;
   border-bottom: 2px #0bd solid;
 }
-
+.anime2 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+ }
 .anime.is-visible {
   opacity: 1;
   transform: translateY(0);
@@ -556,6 +560,7 @@ article p {
 html { 
   scroll-behavior: smooth;
 }
+
 
 
 
