@@ -253,7 +253,7 @@ img {
 
 picture {
   width: 50%;
-  background-color: lightgreen;
+  background-color: #000;
   height: 500rem;
 }
 
@@ -553,6 +553,7 @@ article p {
 html { 
   scroll-behavior: smooth;
 }
+
 
 
 
