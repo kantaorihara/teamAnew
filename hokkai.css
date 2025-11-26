@@ -125,7 +125,7 @@ img {
 }
 
 .main-nav li {
-  margin-left: 36px;
+  margin-right: 33px;
 }
 
 .main-nav a {
@@ -553,6 +553,7 @@ article p {
 html { 
   scroll-behavior: smooth;
 }
+
 
 
 
