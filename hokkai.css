@@ -296,11 +296,19 @@ article p {
   opacity: 1;
   transform: translateY(0);
 }
-
+.anime2.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 .anime:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
+.anime2:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
 
 /*cm部分*/
 
@@ -560,6 +568,7 @@ article p {
 html { 
   scroll-behavior: smooth;
 }
+
 
 
 
