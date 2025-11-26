@@ -138,7 +138,7 @@ img {
 
 .page-header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .wrapper {
@@ -152,9 +152,11 @@ img {
 
 .home-content {
   position: absolute;
-  margin-right: 16%;
-  margin-top: 18%;
-  z-index: 6
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
 }
 
 .page-title {
@@ -553,6 +555,7 @@ article p {
 html { 
   scroll-behavior: smooth;
 }
+
 
 
 
