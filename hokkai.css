@@ -285,30 +285,17 @@ article p {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 2s ease-out, transform 2s ease-out;
-  border-bottom: 2px #0bd solid;
-}
-.anime2 {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 2s ease-out, transform 2s ease-out;
  }
+
 .anime.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
-.anime2.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+
 .anime:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
-.anime2:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-}
-
 
 /*cm部分*/
 
@@ -568,6 +555,7 @@ article p {
 html { 
   scroll-behavior: smooth;
 }
+
 
 
 
